@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>arrayFilter</title>
+</head>
+<body>
+    
+</body>
+<script>
+      const numeros = [1,2,3,4,5,6,7,8,9];  
+
+      const numerosFiltrados = numeros.filter(x => x < 5);
+      console.log(numerosFiltrados, numeros);
+
+
+
+
+      const mascotas = [
+        {nombre: 'Puchini' , edad: 12, tipo: 'perro'},
+        {nombre: 'Chanchito feliz' , edad: 3, tipo: 'perro'},
+        {nombre: 'Pulga' , edad: 10, tipo: 'perro'},
+        {nombre: 'Pelusa' , edad: 16, tipo: 'gato'},
+    ]
+
+    const perros = mascotas.filter(x => x.tipo == 'perro');
+    console.log(perros);
+
+    const gatos = mascotas.filter(x => x.tipo == 'gato');
+    console.log(gatos);
+
+
+</script>
+</html>

@@ -1,0 +1,49 @@
+e = elemento que te dice por ejemplo la coordenada de un click.
+
+
+
+
+e.target = te dice por ejemplo que elemento fue clickeado:
+
+
+
+	    ----ejemplo uno-----  
+
+
+
+		function callback () {
+
+    imagen.classList.toggle('deshabilitado');
+}
+
+
+
+		
+	----ejemplo dos -----
+
+
+	function callback (e) {
+
+    e.target.classList.toggle('deshabilitado');
+}
+
+
+
+     es decir que en el ejemplo dos no necesitas decir donde esta la imagen, 
+     y esto hace la funcion reutilizable con e.target
+
+
+	
+
+
+Para agregar clases a un elemento creado en js es con:
+
+  classList.add("")
+  classList.remove("")
+  classList.toggle("")  en este caso podes usarlo con un evento lo que hace 
+			es sacar y poner el atributo class
+
+  
+ 
+
+

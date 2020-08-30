@@ -1,0 +1,26 @@
+body {
+    margin: 0;
+}
+.contenedor {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    background-color: antiquewhite;
+    width: 100vw;
+    height: 100vh;
+}
+
+.azul, .rojo {
+    width: 250px;
+    height: 250px;
+    background-color: blue;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 100px;
+    color: white;
+}
+.rojo {
+    background-color: red;
+}
+

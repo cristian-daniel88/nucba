@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Evento2</title>
+</head>
+<style>
+#uno {
+    width: 300px;
+    height: 300px;
+    background-color: blue;
+}
+#dos {
+    width: 200px;
+    height: 200px;
+    background-color:green;
+}
+#tres {
+    width: 100px;
+    height: 100px;
+    background-color:red;
+}
+</style>
+<body>
+    <div id="uno">
+        1
+        <div id="dos">
+            2
+            <div id="tres">
+                3
+            </div>
+        </div>
+    </div>
+</body>
+<script>
+    const uno = document.querySelector('#uno');
+    const dos = document.querySelector('#dos');
+    const tres = document.querySelector('#tres');
+
+    uno.addEventListener('click', function(e) {
+        e.stopPropagation()
+        console.log('uno')
+    }, true)
+    dos.addEventListener('click', function(e) {
+      
+        console.log('dos')
+    })
+    tres.addEventListener('click', function(e) {
+        
+        console.log('tres')
+    })
+
+
+</script>
+</html>
