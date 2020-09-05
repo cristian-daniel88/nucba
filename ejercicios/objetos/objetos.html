@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Objeto</title>
+</head>
+<body>
+    
+</body>
+<script>
+const objetoLindo = {
+    propiedad : 'valor',
+    nombre: {
+        pila: 'pepito',
+        apodo: 'pepe'
+    },
+    apellido: 'gomez',
+    edad: 6,
+    intereses:['futbol','musica','programar'],
+    saludar: function () {
+        console.log('hola soy ' + this.nombre.pila)
+    }
+}
+
+// acceder a los valores mediante el . punto 
+console.log(objetoLindo.propiedad);
+console.log(objetoLindo.nombre);
+console.log(objetoLindo.nombre.pila);
+console.log(objetoLindo.saludar); //lo importante en este caso el this
+objetoLindo.saludar();
+
+
+// acceder a los valores mediante array []
+console.log(objetoLindo['nombre']['apodo'])
+
+
+
+// como cambiar valores  con punto .
+objetoLindo.propiedad = 'juancito'
+console.log(objetoLindo.propiedad)
+
+
+// otra forma de cambiar valores con corchetes
+objetoLindo['nombre']['pila'] = 'jorge'
+console.log(objetoLindo.nombre.pila)
+
+
+// para agregar valores nuevoscon constantes la unica opcion es con corchetes 
+const nuevoNombre = 'años';
+const nuevoValor = 101;
+objetoLindo[nuevoNombre] = nuevoValor;
+console.log(objetoLindo);
+
+
+// para agregar valores nuevos con corchetes
+objetoLindo['trofeos'] = 5;
+console.log(objetoLindo)
+
+
+// para agregar valores nuevos con . punto
+objetoLindo.victoria = 10;
+console.log(objetoLindo) 
+
+
+
+
+
+
+</script>
+</html>

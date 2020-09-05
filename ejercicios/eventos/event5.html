@@ -43,18 +43,18 @@
 
     dos.addEventListener('click', function(e) {
        
-        console.log('dos', this)
+        console.log('dos', e.target, this)
     }, true)
 
     tres.addEventListener('click', function(e) {    
-        console.log('tres', this) 
+        console.log('tres', e.target, this) 
     }, true)
 
 
 
 
     function nombre (e) { 
-     console.log('uno', this)
+     console.log('uno', e.target, this)
  } 
 
 </script>
