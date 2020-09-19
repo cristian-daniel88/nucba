@@ -29,7 +29,7 @@
         },
     ]
 
- const resAutos= autos.reduce((acu, item) => {
+    const resAutos= autos.reduce((acu, item) => {
     const acuPrecio = Number(acu.precio.substring(1));
     const itemPrecio = Number(item.precio.substring(1));
     const resultado = acuPrecio > itemPrecio ? acu : item;

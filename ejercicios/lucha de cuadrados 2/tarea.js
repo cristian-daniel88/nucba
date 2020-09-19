@@ -35,7 +35,7 @@ rojo.elemento.addEventListener('click', pelea);
 function pelea(e) {
     let golpeador;
     let golpeado;
-    if (e.target.dataset.character === 'azul') {
+    if (e.target.dataset.character=== 'azul') {
         golpeador = azul;
         golpeado = rojo;
     } else {
