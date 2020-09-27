@@ -65,7 +65,7 @@ const movimientos = [
 
 function sumarMovimientos(dato) { 
   
-  const filtrarMovimientos = movimientos.filter((item) => item["tipo"] === dato);
+  const filtrarMovimientos = movimientos.filter((item) => item.tipo === dato);
 
   const extraerMontos = filtrarMovimientos.map((item) => item["monto"])
 
