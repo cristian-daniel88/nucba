@@ -5,6 +5,7 @@ const habilitado = document.getElementById('habilitado');
 const deshabilitado = document.getElementById('deshabilitado');
 const boton = document.getElementById('boton');
 const listContainer = document.getElementById('listaContenedora');
+const dni = document.getElementById('dni')
 //const deleteButton = document.getElementById("deleteProductButton");
 
 //console.log(habilitado.checked);
@@ -22,22 +23,33 @@ document.addEventListener("click", deleteProduct);
 
 function callback(e) {
        e.preventDefault();
+       const mapeo = usuarios.map((item) => item.dni);
+       
+       if (mapeo == dni.value) {
+            return alert('numero repetido')
+       } else {
+           
        if(habilitado.checked) {
-         const usuario = {
-         nombree : nombre.value,
-         acceso : true,
-         id : usuarios.length + 1
-       } 
-    // ahora voy a pushear
-        usuarios.push(usuario);
-    } else {
         const usuario = {
-            nombree : nombre.value,
-            acceso: false,
-            id : usuarios.length + 1
-        }
-       usuarios.push(usuario); 
-    }
+        nombree : nombre.value,
+        acceso : true,
+        id : usuarios.length + 1,
+        dni: dni.value
+      } 
+   // ahora voy a pushear
+       usuarios.push(usuario);
+       
+   } else {
+       const usuario = {
+           nombree : nombre.value,
+           acceso: false,
+           id : usuarios.length + 1,
+           dni: dni.value
+       }
+      usuarios.push(usuario); 
+   }
+       }
+      
 
     showList(usuarios)
     
@@ -55,7 +67,9 @@ function showList(array) {
 
         const elementoABuscar = e.target.parentNode.attributes.key.value;
 
-        const indexAEliminar = usuarios.indexOf(usuarios[elementoABuscar].nombree);
+        const usuarioFilter = usuarios.find((item) => item.id == elementoABuscar)
+    
+        const indexAEliminar = usuarios.indexOf(usuarioFilter);
 
         usuarios.splice(indexAEliminar, 1 );
 
