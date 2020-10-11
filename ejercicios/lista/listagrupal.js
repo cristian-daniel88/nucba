@@ -6,6 +6,9 @@ const deshabilitado = document.getElementById('deshabilitado');
 const boton = document.getElementById('boton');
 const listContainer = document.getElementById('listaContenedora');
 const dni = document.getElementById('dni')
+
+
+console.dir(habilitado)
 //const deleteButton = document.getElementById("deleteProductButton");
 
 //console.log(habilitado.checked);
@@ -23,32 +26,42 @@ document.addEventListener("click", deleteProduct);
 
 function callback(e) {
        e.preventDefault();
-       const mapeo = usuarios.map((item) => item.dni);
+       const dniFilter = usuarios.filter((item) => item.dni === dni.value);
+
+       if (dni.value < 0 ) {
+        return alert('no negativos')
+    }
        
-       if (mapeo == dni.value) {
-            return alert('numero repetido')
-       } else {
-           
-       if(habilitado.checked) {
+       if (dniFilter.length > 0) {
+           return alert('numero repetido')
+       } else { 
+        if (habilitado.checked) {
+            const usuario = {
+                nombree : nombre.value,
+                acceso : true,
+                id : usuarios.length + 1,
+                dni: dni.value
+                }
+        // ahora voy a pushear
+       usuarios.push(usuario); 
+       } else if(deshabilitado.checked) {
         const usuario = {
-        nombree : nombre.value,
-        acceso : true,
-        id : usuarios.length + 1,
-        dni: dni.value
-      } 
-   // ahora voy a pushear
-       usuarios.push(usuario);
+            nombree : nombre.value,
+            acceso : false,
+            id : usuarios.length + 1,
+            dni: dni.value
+            }
+        // ahora voy a pushear
+        usuarios.push(usuario); 
+
+       } 
        
-   } else {
-       const usuario = {
-           nombree : nombre.value,
-           acceso: false,
-           id : usuarios.length + 1,
-           dni: dni.value
+       
        }
-      usuarios.push(usuario); 
-   }
-       }
+
+      
+
+    
       
 
     showList(usuarios)

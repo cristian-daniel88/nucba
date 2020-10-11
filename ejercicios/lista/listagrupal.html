@@ -7,11 +7,17 @@
 </head>
 <body>
     <form action="">
+        
         <input type="text" id='nombre'>
+
         <input type="number" id="dni" placeholder="dni">
-        <input type="checkbox" id="habilitado"> habilitado
-        <input type="checkbox" id="deshabilitado"> deshabilitado
-        <button id="boton">Agregar</button>
+
+        <label for="habilitado">Habilitado </label>
+        <input type="radio" id="habilitado" name="puede">
+        <label for="deshabilitado">Deshabilitado</label>
+        <input type="radio" id="deshabilitado" name="puede"> 
+        
+        <button type="submit" id="boton">Agregar</button>
     
     </form>
 
