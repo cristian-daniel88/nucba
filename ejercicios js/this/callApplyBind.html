@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Call</title>
+</head>
+<body>
+    
+</body>
+<script>
+    const dani = {
+        nombre : 'rompiste',
+        apellido : 'todo'
+    };
+
+    const winiPoo = {
+        nombre : 'wini',
+        apellido: 'poo'
+    };
+
+    const megusta = ['el arte', 'programar', 'las funciones'];
+    
+
+    const funcioncita = function (meGustaUno, meGustaDos, meGustaTres) {
+        console.log(`Hola Soy ${this.nombre} y me gusta ${meGustaUno}, ${meGustaDos} y ${meGustaTres}`);
+    };
+
+
+    // Call
+    funcioncita.call(dani, megusta[0], megusta[1], 'la joda');
+
+    // Apply
+    funcioncita.apply(winiPoo, megusta)
+    funcioncita.apply(dani, ['a', 'b' , 'c'])
+    
+    // Bind nos devuelve una funcion
+    const funcionConBind = funcioncita.bind(dani, megusta[0], megusta[1], 'el bind' );
+    funcionConBind();
+</script>
+</html>

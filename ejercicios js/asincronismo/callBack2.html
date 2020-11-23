@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Call Back 2</title>
+</head>
+<body>
+    
+</body>
+<script>
+
+
+    function ejemplo2 (id, nombre, callBack) {
+
+        usuario = {
+            dni : id,
+            nombreUsuario: nombre 
+        }
+
+        if (id === 111) {
+            // en este callback no es necesario el null pero lo puse para entender que son 2 parametros
+           callBack('no existe este usuario', null) 
+        } else {
+            callBack(null , usuario)
+        }
+    }
+
+
+    
+    ejemplo2 (111, 'carlos', (paraMetroError, usuarito) => {
+        if (paraMetroError) {
+            return console.log(paraMetroError)
+        } else {
+            console.log(`el nombre de usuario es ${usuarito.nombreUsuario}`)
+        }
+    })
+
+
+</script>
+</html>

@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>this 10 Class</title>
+</head>
+<body>
+    
+</body>
+<script>
+    class crearPersona {
+        constructor(nombre, edad) {
+            this.nombre = nombre;
+            this.edad = edad;
+        }
+        cumple() {
+            this.edad++;
+            return console.log(`la edad ahora es ${this.edad} años`)
+        }
+    }
+
+    const persona = new crearPersona('JUPITER', 22 );
+
+    
+    
+    
+    class crearAlumno extends crearPersona {
+        constructor(nombre, edad, legajo) {
+        super(nombre, edad)
+        this.legajo = legajo
+        }
+
+        decirLegajo() {
+            console.log(`el lagajo de ${this.nombre} es ${this.legajo}`)
+        }
+    }
+
+
+    const personita = new crearAlumno('juan', 23, 6546346);
+    
+</script>
+</html>
+
+
+

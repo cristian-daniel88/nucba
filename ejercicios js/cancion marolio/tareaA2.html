@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>buscar la letra "o" con funtion</title>
+</head>
+<body>
+    
+</body>
+<script>
+
+const cancionMarolio = 'cancion de marolio';
+const separarStringYArmarArray = cancionMarolio.split("");
+
+function Buscarletra(letra) {
+    const filtrado = separarStringYArmarArray.filter((item) => item.includes(letra))
+    console.log(filtrado.length)
+}
+
+Buscarletra('o')
+</script>
+</html>

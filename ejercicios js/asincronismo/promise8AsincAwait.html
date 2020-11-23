@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Async Await 2</title>
+</head>
+<body>
+    
+</body>
+<script>
+
+//  FORMA 1 THEN y CATCH OBTENEMOS EL DATOS DESDE UNA API CON FETCH  
+
+// fetch("https://dog.ceo/api/breeds/image/random")
+//   .then((res) => {
+//     return res.json();
+//   })
+//   .then((loQueDevuelveElThenAnterior) =>
+//     console.log(loQueDevuelveElThenAnterior)
+//   );
+//   .catch((err) => console.log(err))
+
+
+
+// FORMA 2 ASYNC AWAIT  OBTENEMOS EL DATOS DESDE UNA API CON FETCH  
+
+async function traerPerritos () {
+    try {
+        // hasta que no ejecute la primera linea no seguira para abajo
+        const perritosFetch = await fetch("https://dog.ceo/api/breeds/image/random");
+        const perritoDefinitivo = await perritosFetch.json();
+        console.log(perritoDefinitivo.message);
+    } catch(error) {
+        console.log(error);
+    }
+}
+console.log('holis');
+console.log(traerPerritos());
+console.log('chau');
+
+
+
+
+
+</script>
+</html>

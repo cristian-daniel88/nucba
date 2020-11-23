@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=, initial-scale=1.0">
+    <title>buscar la letra "o" con function y for</title>
+</head>
+<body>
+    
+</body>
+<script>
+
+const cancionMarolio = 'cancion de marolio';
+const cancionMarolioSpliteado = cancionMarolio.split('');
+
+function busqueda(letra) {
+    const array = [];
+    for (item of cancionMarolioSpliteado) {
+        if (item === letra) {
+            array.push(item)
+        }
+        
+    }
+   return console.log(array.length)
+}
+
+busqueda('o');
+
+</script>
+</html>

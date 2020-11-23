@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Promise 3</title>
+</head>
+<body>
+    
+</body>
+<script>
+
+    const clima = true;
+
+    const gente = new Promise((resolve, reject)=> {
+        if (clima) {
+            const previa = {
+                nombre: 'Club one',
+                location: 'centro',
+                fecha: 'viernes'
+            }
+
+            resolve(previa)
+        } else {
+            reject('se pudrio todo')
+        }
+    })
+
+    // esto va dar true por que el clima fue declarado antes de la promesa 
+    console.log(gente)
+</script>
+</html>

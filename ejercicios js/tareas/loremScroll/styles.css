@@ -1,0 +1,128 @@
+@import url("https://fonts.googleapis.com/css2?family=Syne+Mono&display=swap");
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Syne Mono", monospace;
+  /*background-color: #642b73;
+  background-image: linear-gradient(45deg, #642b73 0%, #c6426e 100%);*/
+  background-color: #642b73;
+  background-image: linear-gradient(45deg, #0f0702 0%, #ffbb00 100%);
+  color: #fff;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin: 0;
+  padding-bottom: 100px;
+}
+
+h1 {
+  margin-bottom: 0;
+  text-align: center;
+}
+
+.filter-container {
+  margin-top: 20px;
+  width: 80%;
+  max-width: 800px;
+}
+
+.filter {
+  width: 100%;
+  padding: 12px;
+  border-radius: 30px;
+  border: none;
+  font-size: 16px;
+}
+
+.filter:focus {
+  box-shadow: 0px 0px 15px #f6d1ff;
+  outline: none;
+}
+
+.post {
+  background-color: #ffffff;
+  background-image: linear-gradient(-200deg, #000046 0%, #0f82a1 100%);
+  box-shadow: 0 2px 4px rgba(255, 255, 255, 0.201);
+  margin: 40px 0;
+  border-radius: 20px;
+  padding: 20px;
+  width: 80vw;
+  max-width: 800px;
+  display: flex;
+  position: relative;
+}
+
+.post .post-title {
+  margin: 0;
+}
+
+.post .post-body {
+  margin-top: 15px;
+  line-height: 1.3;
+}
+
+.post .post-info {
+  margin-left: 20px;
+}
+
+.post .numerito {
+  position: absolute;
+  top: -20px;
+  left: -20px;
+  font-size: 20px;
+  width: 45px;
+  height: 45px;
+  background: #fff;
+  color: black;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 5px 10px;
+}
+
+.loader {
+  opacity: 0;
+  display: flex;
+  position: sticky;
+  bottom: 50px;
+  transition: opacity 0.3s ease-in;
+}
+
+.loader.show {
+  opacity: 1;
+}
+
+.circulito {
+  background-color: red;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  margin: 5px;
+  animation: rebotanding 0.5s ease-in infinite;
+}
+
+.circulito:nth-last-of-type(2) {
+  animation-delay: 0.1s;
+  background-color: greenyellow;
+}
+
+.circulito:nth-last-of-type(3) {
+  animation-delay: 0.2s;
+  background-color: blue;
+}
+
+@keyframes rebotanding {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+}

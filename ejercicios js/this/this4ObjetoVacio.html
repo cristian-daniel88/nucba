@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Objeto Vacio</title>
+</head>
+<body>
+    
+</body>
+<script>
+    const daniBuena = {};
+    daniBuena.nombre = 'dani';
+    daniBuena.apellido = 'buena';
+    daniBuena.edad = '45'
+    daniBuena.cumple = function () {
+        daniBuena.edad++;
+    };
+
+    console.log(daniBuena.edad); // 45
+    daniBuena.cumple();
+    console.log(daniBuena.edad) // 46
+</script>
+</html>

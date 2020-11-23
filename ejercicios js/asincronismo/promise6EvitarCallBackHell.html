@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Evitar callback hell con promise then catch</title>
+</head>
+<body>
+    
+</body>
+<script>
+
+    function titoc() {
+      return new Promise((resolve, reject)=>{
+            setTimeout(resolve, 1000)
+        })
+    }
+
+    titoc().then(() => {
+        console.log('1 segundo');
+        return titoc();
+    })
+    .then(()=> {
+        console.log('2 segundos');
+        return titoc();
+    })
+    .then(()=> {
+        console.log('3 segundos');
+        return titoc();
+    })
+</script>
+</html>

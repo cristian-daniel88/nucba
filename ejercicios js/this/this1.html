@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>This 1</title>
+</head>
+<body>
+    
+</body>
+<script>
+    const pewito = {
+  nombre: "Gandalf",
+  ladrido: "Guau",
+  edad: 7,
+
+  hablar: function () {
+    console.log(this); // Esto es el objeto
+  },
+
+  ladrar: () => {
+    console.log(this); // Esto es window
+  },
+};
+
+function queEsThis() {
+  console.log(this);
+}
+
+// Tarea:
+// Ver por qué la Arrow no toma al objeto como This
+
+// const persona = {
+//   nombre: "Dani",
+//   ladrido: "SE ROMPIOOOOOOOOOOOO",
+//   edad: 7,
+
+//   hablar: function () {
+//     console.log(this);
+//     console.log(`Hola mi nombre es ${this.nombre} y digo ${this.ladrido}`);
+//   },
+// };
+
+// const queDiceDani = persona.hablar;
+// console.log(queDiceDani); // te devuelve la funcion
+// console.log(persona.hablar()); // te devuelve el resultado
+// console.log(queDiceDani()); // te devuelve indefinido 
+</script>
+</html>

@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>call back 1</title>
+</head>
+<body>
+    
+</body>
+<script>
+
+    //creamos la funcion
+    function ejemplo (id, nombre, callback ) {
+        usuario = {
+            idObjeto : id,
+            nombreObjeto: nombre,
+        }
+        callback(usuario);
+    }
+
+
+
+    //creamos la constante donde estara alojado el callback
+    const callback1 = (usuarito) => { console.log(`el nombre de usuario es ${usuarito.nombreObjeto}`)};
+
+
+
+    //llamamos a la funcion
+    ejemplo(10, 'Cristian', callback1)
+
+
+</script>
+</html>

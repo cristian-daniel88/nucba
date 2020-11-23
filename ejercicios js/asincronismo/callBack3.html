@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>call back 3</title>
+</head>
+<body>
+    
+</body>
+
+<script>
+
+    function ejemplo3(array, callback) {
+
+        if(array.length > 0) {
+            const arrayMapeado = array.map((val) => val + 1);
+            callback(null, array);
+        } else {
+            callback('error amigo', null)
+        }   
+    }
+
+    ejemplo3([1,2,3,4], (parametroError, arrayMap)  =>{
+        if (parametroError) {
+            return console.log(parametroError)
+        } else {
+            console.log(arrayMap)
+        }   
+    })
+</script>
+</html>

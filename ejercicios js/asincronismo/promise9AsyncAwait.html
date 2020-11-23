@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Async Await 3</title>
+</head>
+<body>
+    
+</body>
+<script>
+
+    // En este ejemplo usaremos una promesa creada , no fetch, ejemplo sacado de promise5.html
+         
+         function traerHielo(clima) {
+      return new Promise(function (resolve, reject) {
+        setTimeout(() => {
+          if (clima) {
+            const previa = {
+              nombre: "Club one",
+              location: "Por el centro",
+              fecha: "Viernes",
+            };
+
+            resolve(previa);
+          } else {
+            reject("Se pudrió todo");
+          }
+        }, 5000);
+        console.log("HOLA");
+      });
+    }
+
+    
+    // traerHielo(true)
+    //   .then((valor) => {
+    //     console.log(valor);
+    //   })
+    //   .catch((error) => {
+    //     console.log(error);
+    //   });
+
+
+    // Ahora usaremos Async Await
+   async function name() {
+       try{
+           const asd = await traerHielo(true);
+           console.log(asd.nombre);
+
+       } catch (error) {
+           console.log(error)
+       }
+   }
+   console.log('holis');
+   console.log(name());
+   console.log('chau');
+</script>
+</html>

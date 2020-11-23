@@ -1,0 +1,14 @@
+e.preventDefault = no se actualiza la consola y se puede ver los numeros de corrido.
+
+
+-crear elementos es decir etiquetas de html con createElement.
+
+-unir un dato/valor es decir al resultado de la suma/resta al elemento creado 
+   con textContent.
+
+-Poner dentro de la caja contenedora el elemento creado anteriormente con
+  appendChild()  
+
+
+return : en este caso esta en un if, lo que hace el return es que si no cumple con
+  el condicional no lee lo que sigue, es decir no pasa a la otra etapa. 

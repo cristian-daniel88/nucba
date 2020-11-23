@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>This 8 New</title>
+</head>
+<body>
+    
+</body>
+<script>
+
+    function crearUsuario(nombre, apellido, edad) {
+        this.nombre = nombre;
+        this.edad = edad;
+        this.apellido = apellido;   
+      
+    }
+
+    crearUsuario.prototype.decirApellido = function () {
+        console.log(`apellido es ${this.apellido}`)
+    }
+
+    crearUsuario.prototype.cumple = function () {
+        this.edad++
+        return console.log(`mi edad ahora es ${this.edad}`)
+    }
+
+
+    const juan = new crearUsuario('juan', 'peress', 22);
+
+    
+</script>
+</html>

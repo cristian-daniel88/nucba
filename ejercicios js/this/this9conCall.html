@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>this 9 con call</title>
+</head>
+<body>
+    
+</body>
+<script>
+    function creaPersona(nombre, edad) {
+        this.nombre = nombre,
+        this.edad = edad
+    }
+    creaPersona.prototype.cumple = function () {
+        this.edad++
+        return console.log(`la edad ahora es ${this.edad} años`)
+    }
+
+
+
+
+
+    function crearLegajo(nombre, edad, legajo) {
+        // tomamos los valores de crearPersona()
+        creaPersona.call(this, nombre, edad);
+        this.legajo = legajo;
+    }
+
+    //tomamos el metodo de crearPersona() que es =>>> cumple()
+    crearLegajo.prototype = Object.create(creaPersona.prototype)
+
+    //----------------------------------------------------------------//
+    crearLegajo.prototype.decirLegajo = function () {
+        console.log(`mi legajo es ${this.legajo}`)
+    }
+
+
+    
+    const pedro = new crearLegajo('pedro', 22, 54548659646);
+</script>
+</html>

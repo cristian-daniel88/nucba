@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Asyn Await 4</title>
+</head>
+<body>
+    <div class="contenedor">
+        <div class="imagen" id="imagen"></div>
+        <button class="button" id="button">Traer pewito</button>
+      </div>
+</body>
+<script>
+
+const botoncitoLindo = document.getElementById("button");
+const imagenContainer = document.getElementById("imagen");
+
+botoncitoLindo.addEventListener("click", async () => {
+    const imageUrl = await traerPewito();
+    mostrarPerrito(imageUrl);
+});
+
+const traerPewito = async () => {
+  try {
+    const fetchPewito = await fetch("https://dog.ceo/api/breeds/image/random");
+    const pewitoDefinitivo = await fetchPewito.json();
+    return pewitoDefinitivo.message;
+  } catch (error) {
+    console.log(error);
+  }
+};
+
+const mostrarPerrito = (imagenUrl) => {
+  const codigoHTML = `<img src="${imagenUrl}">`;
+  imagenContainer.innerHTML = codigoHTML;
+};
+
+const inicializar = () => {
+  window.addEventListener("DOMContentLoaded", async () => {
+    const imageUrl = await traerPewito();
+    mostrarPerrito(imageUrl);
+  });
+};
+
+inicializar();
+
+// **************************************** TAREA PARA EL HOGAR ****************************************
+// Hacer la funcion del botón
+// Quiero que cuando haga click en el botón:
+// Vaya a buscar un link random
+// Y luego lo pinte (renderice)
+// Esto ya lo estamos haciendo en algún lado...🤔
+// PERO EN DONDE??!! 😩😩😩😩😩😩
+
+</script>
+</html>

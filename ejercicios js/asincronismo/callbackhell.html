@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CallBack Hell</title>
+</head>
+<body>
+    
+</body>
+<script>
+    setTimeout(()=> {
+        console.log('1 segundo');
+        setTimeout(() => {
+            console.log('2 segundo');
+            setTimeout(() => {
+                console.log('3 segundo');
+                setTimeout(()=> {
+                    console.log('4 segundo')
+                } ,1000)
+            }, 1000)
+        }, 1000)
+    }, 1000)
+</script>
+</html>

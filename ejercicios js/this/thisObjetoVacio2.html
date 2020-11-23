@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Objeto Vacio</title>
+</head>
+<body>
+    
+</body>
+<script>
+    // const daniBuena = {};
+    // daniBuena.nombre = 'dani';
+    // daniBuena.apellido = 'buena';
+    // daniBuena.edad = '45'
+    // daniBuena.cumple = function () {
+    //     daniBuena.edad++;
+    // };
+
+    // const daniMala = Object.create(null);
+    // daniMala.nombre = 'dani';
+    // daniMala.apellido = 'buena';
+    // daniMala.edad = '45'
+    // daniMala.cumple = function () {
+    //     daniMala.edad++;
+    // };
+
+    function crearUsuario(nombre, apellido, edad) {
+        const usuario = {}
+        usuario.nombre = nombre
+        usuario.apellido = apellido
+        usuario.edad = edad;
+        usuario.cumple = function () {
+            usuario.edad++
+        }
+        return usuario    
+    }
+
+    const juan = crearUsuario('juan','perez', 25);
+
+    console.log(juan.edad); // 25
+    juan.cumple();
+    console.log(juan.edad); // 26
+
+
+   
+</script>
+</html>

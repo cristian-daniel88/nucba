@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>call back 4</title>
+</head>
+<body>
+    
+</body>
+
+<script>
+
+    function ejemplo4(array, callback) {
+
+        if(array.length > 0) {
+            const arrayMapeado = array.map((valor) => valor + 1)
+            callback(null, arrayMapeado )
+    } else {
+        callback('error amigo', null)
+    }       
+    }
+
+    // en este callback mostrara el filtro en 21
+    ejemplo4([10, 20, 30, 40], (parametroError, mapeado) => {
+        if(parametroError) {
+           return console.log(parametroError)
+        }
+        else {
+            const filtro = mapeado.filter((valor) => valor === 21 );
+            console.log(filtro)
+        }
+    } )
+</script>
+</html>

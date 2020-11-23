@@ -1,0 +1,282 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Montserrat", sans-serif;
+  background-color: #121212;
+  color: white;
+}
+
+header form button {
+  cursor: pointer;
+}
+
+input {
+  outline: none;
+  box-shadow: 1px 1px 1px #fff;
+}
+
+input:focus {
+  outline: none;
+}
+
+header {
+  background-image: url("https://k37.kn3.net/457A03737.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 45vh;
+  position: relative;
+}
+
+header::after {
+  content: "";
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background: rgb(255, 0, 0);
+  mix-blend-mode: color-burn;
+}
+
+header * {
+  z-index: 10;
+}
+
+header h1 {
+  margin: 15px;
+}
+
+#form {
+  width: 80%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+#form input {
+  border: 0;
+  width: 100%;
+  background: white;
+  padding: 15px;
+  border-radius: 30px;
+  margin-bottom: 20px;
+}
+
+.masResultados {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+button {
+  width: 100px;
+  border-radius: 30px;
+  padding: 15px;
+  border: none;
+  outline: none;
+  background: linear-gradient(350deg, #a8ff78 0%, #78ffd6 100%);
+  color: black;
+  margin: 15px;
+  cursor: pointer;
+}
+
+#form button {
+  width: 20%;
+  border-radius: 30px;
+  padding: 15px;
+  border: none;
+  outline: none;
+  background: linear-gradient(350deg, #a8ff78 0%, #78ffd6 100%);
+  color: black;
+}
+
+.resultados {
+  width: 80%;
+  margin: 0 auto;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  padding: 50px;
+  flex-direction: column;
+}
+
+.resultados ul {
+  width: 100%;
+}
+
+.resultados ul li {
+  list-style: none;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 10px 0;
+}
+
+.resultados ul li p {
+  width: 50%;
+  max-width: 50%;
+}
+
+audio {
+  height: 30px;
+  max-width: 50%;
+}
+
+.navegador1 {
+    height: 50px;
+    width: 100%;
+    background: red;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    z-index: 50;
+    padding: 0 55px;
+  }
+
+#botoneraGrande {
+  display: flex;
+}
+
+#botoneraGrande li {
+  list-style: none;
+  margin-right: 10px;
+  cursor: pointer;
+}
+
+.hamburguesaIcon {
+  display: none !important;
+}
+
+.menuResponsive {
+  display: none !important;
+}
+
+.loader {
+  opacity: 0;
+  display: flex;
+  position: sticky;
+  bottom: 50px;
+  transition: opacity 0.3s ease-in;
+  justify-content: center;
+}
+
+.loader.show {
+  opacity: 1;
+}
+
+.circulito {
+  background-color: red;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  margin: 5px;
+  animation: rebotanding 0.5s ease-in infinite;
+}
+
+.circulito:nth-last-of-type(2) {
+  animation-delay: 0.1s;
+  background-color: greenyellow;
+}
+
+.circulito:nth-last-of-type(3) {
+  animation-delay: 0.2s;
+  background-color: blue;
+}
+
+@keyframes rebotanding {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+}
+
+
+/**--          ---**/
+
+
+  @media screen and (max-width: 500px) {
+      .resultados ul li {
+          flex-direction: column;
+      }
+      .resultados {
+          width: 100%;
+          padding: 30px;
+      }
+
+      .resultados ul li p {
+          width: 100%;
+          max-width: 100%;
+          margin: 10px 0;
+      }
+      audio {
+          width: 100%;
+          max-width: 100%;
+      }
+      #form button {
+          width: 60%;
+      }
+
+      #botoneraGrande {
+        display: none;
+      }
+
+      .hamburguesaIcon {
+        display: flex !important;
+        font-size: 30px;
+        margin-right: -32px;
+        cursor: pointer;
+      }
+      
+      .menuResponsive {
+        position: absolute;
+        width: 100vw;
+        height: 100vh;
+        background: deeppink;
+        top: 0;
+        left: 150vw;
+        transition: left 0.3s ease-in;
+        display: flex !important;
+        justify-content: center;
+        align-items: center;
+      }
+
+      .menuResponsive ul li {
+        list-style: none;
+        margin-bottom: 20px;
+        cursor: pointer;
+
+      }
+      .menuResponsive i{
+        position: absolute;
+        top: 10px;
+        left: 5vw;
+        font-size: 50px;
+        color: white;
+        z-index: 100;
+        cursor: pointer;
+      }
+
+      .show {
+        left: 10vw !important;
+      }
+      
+  }

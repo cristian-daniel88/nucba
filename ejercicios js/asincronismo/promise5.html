@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>promise 5</title>
+  </head>
+  <body></body>
+  <script>
+      
+    function traerHielo(clima) {
+      return new Promise(function (resolve, reject) {
+        setTimeout(() => {
+          if (clima) {
+            const previa = {
+              nombre: "Club one",
+              location: "Por el centro",
+              fecha: "Viernes",
+            };
+
+            resolve(previa);
+          } else {
+            reject("Se pudrió todo");
+          }
+        }, 5000);
+        console.log("HOLA");
+      });
+    }
+
+    traerHielo(true)
+      .then((valor) => {
+        console.log(valor);
+      })
+      .catch((error) => {
+        console.log(error);
+      });
+
+ 
+
+  </script>
+</html>

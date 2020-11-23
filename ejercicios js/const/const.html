@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Const</title>
+</head>
+<body>
+    
+</body>
+<script>
+
+const obj = {}
+const obj2 = obj
+
+ obj2.lalala ="lalalala"
+// otra manera seria:
+//  obj2['lalala'] = 'lalalala'
+
+ console.log(obj)
+
+
+
+
+// no se puede crear un objto nuevo solo se puede cambiar el valor como en el ejemplo anterior
+// si usamos const daria error, en este caso mantiene obj3{}
+
+ let obj3 = {}
+ let obj4 = obj3
+
+obj4 = {
+    lalala: "lalalala"
+}
+
+// obj4.lalala= "lalalala"
+
+console.log(obj3)
+
+
+
+
+
+// no se puede cambiar el const o let si no es objeto, es decir se mantiene el valor inicial
+ 
+let numero = 2 
+
+let numero2 = numero
+
+ numero2 = 8
+
+ console.log(numero)
+
+
+</script>
+</html>

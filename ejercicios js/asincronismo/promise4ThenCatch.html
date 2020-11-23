@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Promise Then Catch</title>
+</head>
+<body>
+    
+</body>
+<script>
+
+    const clima = true;
+
+    const gente = new Promise((resolve, reject)=> {
+        if (clima) {
+            const previa = {
+                nombre: 'Club one',
+                location: 'centro',
+                fecha: 'viernes'
+            }
+            // then
+            resolve(previa)
+        } else {
+            // catch
+            reject('se pudrio todo')
+        }
+    })
+
+    
+    // metodo then   //metodo catch
+    
+    gente
+    .then((valor)=>{
+        console.log(valor.fecha)
+
+    })
+    .catch((errorrr)=> {
+        console.log(errorrr)
+    })
+</script>
+</html>

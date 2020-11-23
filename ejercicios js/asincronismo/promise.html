@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>promise</title>
+</head>
+<body>
+    
+</body>
+<script>
+    // las promesas pueden tener 3 estados  promiseState: 'pendindg' , promiseState: 'fullfilled', promiseState: 'pendindg'
+    
+
+
+
+    // Ej1: en este caso el resultado va ser [[PromiseState]]: "pending" [[PromiseResult]]: undefined
+
+    const ejemplo1 = new Promise((resolve, reject)=> {});
+
+    console.log('Ejemplo 1');
+    console.log(ejemplo1);
+
+
+
+
+
+    // Ej2: en este caso el resultado va ser [[PromiseState]]: "fulfilled" [[PromiseResult]]: "Ejemplo Aceptada"
+    const ejemploAceptada = new Promise((resolve, reject)=> {
+        resolve('Ejemplo Aceptada')
+    });
+
+    console.log('Ejemplo 2');
+    console.log(ejemploAceptada);
+
+
+
+
+
+    // Ej3: en este caso el resultado va ser [[PromiseState]]: "rejected" [[PromiseResult]]: "Ejemplo Rechazada"
+
+    const ejemploRechazada = new Promise((resolve, reject)=> {
+        reject('Ejemplo Rechazada');
+        
+    });
+    
+    console.log('Ejemplo 3');
+    console.log(ejemploRechazada);
+
+</script>
+</html>

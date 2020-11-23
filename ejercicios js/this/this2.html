@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>This 2</title>
+</head>
+<body>
+    
+</body>
+<script>
+    // const foo = {
+    //     log: function () {
+    //         console.log(this)
+    //     return function () {
+    //         console.log(this)
+    //     }   
+    //     }
+    // }
+
+    const dani = {
+        notas: {
+           lengua: 10,
+           matematica: 3,
+           geografia: 8, 
+        },
+
+        promedio: function() {
+            let materias = Object.keys(this.notas); // Esto seria los valores: lengua, matematica, geografia;
+            return(
+                materias
+                .map((materia) => {
+                return this.notas[materia]}))
+                .reduce(function(acu, valor){
+                return acu + valor
+                }) / materias.length
+
+                // En el .map() no se usa una function normal por que sale del scope, usariamos arrow function
+                // por que toma el this del let materias = Object.keys(this.notas)
+
+                // En el .reduce() no es necesario usa arrow function por que no usamos el this en esa funcion
+        }
+    }
+
+    console.log(dani.promedio())
+ 
+</script>
+</html>

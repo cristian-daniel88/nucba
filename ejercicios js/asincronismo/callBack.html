@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CallBack</title>
+</head>
+<body>
+    
+</body>
+<script>
+    //El Callback es una funcion que se le pasa como para parametro otra funcion
+
+
+    const unNombreEnConstante = 'carlos';
+
+
+    // Creamos La funcion
+    const traerUsuario = (id, nombre, callback) => {
+        usuario = {
+            nombre: nombre,
+            id : id
+        }
+
+        callback(usuario)
+    }
+
+    //llamamos a la funcion
+    traerUsuario(1, unNombreEnConstante, (usuarito)=>{ 
+        console.log(`el usuario es ${usuarito.nombre}`)
+    })
+
+
+</script>
+</html>
