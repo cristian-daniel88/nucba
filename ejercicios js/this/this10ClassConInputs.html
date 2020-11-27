@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>this 10 Class</title>
+</head>
+<body>
+    <form action="">
+        <input type="text" id="nombre">
+        <input type="text" id="edad">
+        <input type="text" id="legajo">
+        <button id="boton">buton</button>
+    </form>
+</body>
+<script>
+    const nombreUsuario = document.getElementById('nombre');
+    const edadUsuario = document.getElementById('edad');
+    const legajoUsuario = document.getElementById('legajo');
+    const boton = document.getElementById('boton');
+
+    
+
+    const arrayVacio = []
+
+    boton.addEventListener('click', (e) => {
+        e.preventDefault()
+        nombre = nombreUsuario.value;
+        edad  = edadUsuario.value;
+        legajo = legajoUsuario.value;
+        const personita = new crearAlumno(nombre, edad, legajo);
+        arrayVacio.push(personita);
+    })
+
+
+
+    class crearPersona {
+        constructor(nombre, edad) {
+            this.nombre = nombre;
+            this.edad = edad;
+        }
+        cumple() {
+            this.edad++;
+            return console.log(`la edad ahora es ${this.edad} años`)
+        }
+    }
+
+    
+    
+    
+    class crearAlumno extends crearPersona {
+        constructor(nombre, edad, legajo) {
+        super(nombre, edad)
+        this.legajo = legajo
+        }
+
+        decirLegajo() {
+            console.log(`el lagajo de ${this.nombre} es ${this.legajo}`)
+        }
+    }
+
+
+  
+</script>
+</html>
+
+
+
