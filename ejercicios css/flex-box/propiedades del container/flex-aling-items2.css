@@ -1,0 +1,35 @@
+body {
+    margin: 0;
+  }
+  
+  .flex-container {
+    display: flex;
+    height: 100vh;
+    
+
+    /* cross axis para centrarlo es necesario height: 100vh  */
+    align-items: stretch;
+
+    /* main axis */
+    justify-content: center;
+  }
+  
+  .flex-item {
+    background-color: black;
+    color: honeydew;
+    text-align: center;
+    margin: 5px;
+    min-width: 150px;
+
+    /* en este ejemplo fue comentado  el height para ver el efecto  align-items: flex-start || align-items: stretch*/
+    /* height: 120px; */
+  }
+  
+  .orange {
+    background-color: orange;
+  }
+  
+  .green {
+    background-color: green;
+  }
+  

@@ -1,0 +1,73 @@
+
+    <!DOCTYPE html>
+    <html lang="en">
+      <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>react 3</title>
+        <style>
+          .botoncito {
+            background-color: brown;
+            color: cornsilk;
+          }
+        </style>
+      </head>
+      <body>
+        <div id="root"></div>
+        <script
+          crossorigin
+          src="https://unpkg.com/react@17/umd/react.development.js"
+        ></script>
+        <script
+          crossorigin
+          src="https://unpkg.com/react-dom@17/umd/react-dom.development.js"
+        ></script>
+
+        <!-- PRINCIPIOS QUE VAMOS A EMPEZAR A VER -->
+        <!-- COMPONENTES, PROPIEDADES, JSX, ESTADO -->
+
+        <script>
+          const App = () => {
+               const otraConstante = () => {console.log('holaa constante')}
+            return React.createElement(
+              "div",
+              { id: 'componenteApp' },
+              [React.createElement(Titulo, {orni: 'titulo 1 desde propiedades'} , []),
+               React.createElement(Titulo, {orni: 'titulo 2 desde propiedades'} , []),
+               React.createElement(Titulo, {orni: 'titulo 3 desde propiedades'} , []),
+               React.createElement(OtroTitulo, {}, []),
+               React.createElement(Botoncito, {holis: 'botoncito', haceClick: () => {console.log('holaa')} }, []),
+               React.createElement(Botoncito, {holis: 'botoncito2' , haceClick: otraConstante}, []),
+               React.createElement(Parrafo, {parrafo1: 'parrafoUno'}, [])
+               ]
+            );
+          
+          };
+
+          const Titulo = (props) => {
+            return React.createElement("h1", {id: 'componenteTitulo'}, props.orni);
+          };
+
+          const OtroTitulo = () => {
+            return React.createElement("h4", {id: 'componenteOtroTitulo'}, "Subtitulo desde componente");
+          };
+
+          // const Parrafo parametro desestructurado != props
+          const Parrafo = ({parrafo1, parrafo2}) => {
+            return React.createElement("p", {id: 'componenteParrafo'}, parrafo1, parrafo2);
+          };
+
+          const Botoncito = (props) => {
+            return React.createElement('button', {className: props.holis , onClick: props.haceClick}, 'botoncito' )
+          }
+
+          //Al metodo .render() del ReacDOM le vamos a decir que pintar y donde pintar
+          ReactDOM.render(
+            React.createElement(App),
+            document.getElementById("root")
+          );
+        </script>
+      </body>
+    </html>
+  </body>
+</html>

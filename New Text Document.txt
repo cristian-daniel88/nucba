@@ -1,0 +1,36 @@
+Para clonar una rama específica de un repositorio, escriba --branch <branch name> antes de la url del repositorio:
+
+git clone --branch <branch name> <url> [directory]
+Me siento un flojito... que uso la aplicacion de escritorio de GitHUb
+:(
+jajajajajajaja
+From Manu Diaz to Everyone:  10:53 PM
+te escuchas como en una burbuja santi igual
+From Franco Messina to Everyone:  10:54 PM
+git clone --branch <branch name> <url> [directory]
+
+From NUC BA - CODING 3 to Everyone:  10:55 PM
+https://stackoverflow.com/questions/10312521/how-to-fetch-all-git-branches
+From Gastón Rubiolo to Everyone:  10:56 PM
+Pasa que..... lo rompio!!
+jajajaja
+HAsta al mic
+Vos que decis Dani?
+From David to Everyone:  10:56 PM
+halo
+ok llegué y santi rompió el microfono
+From Daniela Llano to Everyone:  10:56 PM
+Rompe todo
+Increible
+From David to Everyone:  10:58 PM
+:0
+calumnias? es verdad Santiago?
+escucho la voz de un santigo como triste como si hubiese hecho la rompizion a un microfono
+si, tranca. Sho escucho
+From Daniela Llano to Everyone:  10:59 PM
+No entendí tu voz
+Asi que no hice la tarea
+From Franco Messina to Everyone:  10:59 PM
+si
+From Daniela Llano to Everyone:  10:59 PM
+Ah, eso es después

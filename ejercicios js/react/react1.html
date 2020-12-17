@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>React 1</title>
+  </head>
+  <body>
+    <div id="root"></div>
+    <script
+      crossorigin
+      src="https://unpkg.com/react@17/umd/react.development.js"
+    ></script>
+    <script
+      crossorigin
+      src="https://unpkg.com/react-dom@17/umd/react-dom.development.js"
+    ></script>
+
+    <!-- PRINCIPIOS QUE VAMOS A EMPEZAR A VER -->
+    <!-- COMPONENTES, PROPIEDADES, JSX, ESTADO -->
+
+    <script>
+      const Juancito = () => {
+        // Las funciones que crean componentes siempre retornan algo
+        // solamenente una cosa
+
+        return React.createElement('div', {className: 'algoPalCss desdeUnDiv', id: 'idDelDiv'}, 'holis' );
+        // createElement va recibir 3 parametros :
+        // primer parametro : etiqueta o componente
+        // segundo parametro (objeto) : atributos o propiedades
+        // tercer parametro (array) : hijos
+      };
+
+      const Titulo = () => {
+           return React.createElement('h1', {}, 'Titulo uno desde componente')
+      }
+
+      const OtroTitulo = () => {
+          return React.createElement('h4', {}, 'Subtitulo desde componente')
+      }
+
+
+
+
+
+
+
+
+      //Al metodo .render() del ReacDOM le vamos a decir que pintar y donde pintar
+      ReactDOM.render(
+        React.createElement(Juancito),
+        document.getElementById("root")
+      );
+    </script>
+  </body>
+</html>

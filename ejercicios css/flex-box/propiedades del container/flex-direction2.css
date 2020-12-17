@@ -1,0 +1,23 @@
+body {
+    margin: 0;
+  }
+  
+  .flex-container {
+    display: flex;
+    flex-direction: row-reverse;
+    
+  }
+  
+  .flex-item {
+    background-color: black;
+    margin: 5px;
+    width: 120px;
+    height: 120px;
+  }
+
+  .orange {
+    background-color: orange;
+  
+  }
+  
+  

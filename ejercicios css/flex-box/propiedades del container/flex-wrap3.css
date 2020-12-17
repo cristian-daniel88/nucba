@@ -1,0 +1,26 @@
+body {
+  margin: 0;
+}
+
+.flex-container {
+  display: flex;
+
+  /* el flex-wrap: wrap-reverse en vez de tirar para abajo las tira para arriba*/
+  flex-wrap: wrap-reverse;
+  /* flex-wrap: no-wrap queda como valor por defecto */
+}
+
+.flex-item {
+  background-color: black;
+  margin: 5px;
+  min-width: 150px;
+  height: 120px;
+}
+
+.orange {
+  background-color: orange;
+}
+
+.green {
+  background-color: green;
+}

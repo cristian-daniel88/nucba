@@ -1,0 +1,36 @@
+body {
+    margin: 0;
+  }
+  
+  .flex-container {
+    display: flex;
+    height: 100vh;
+  }
+  
+  .flex-item {
+    background-color: black;
+    color: honeydew;
+    text-align: center;
+    margin: 5px;
+    height: 120px;
+    
+    flex-grow: 1;
+    width: 300px;
+    
+    
+  }
+  
+  .orange {
+    background-color: orange;
+
+    /* cede su espacio cuando se va achicando la ventana para que las demas cajas tenga 300px */
+    flex-shrink: 2;
+    
+  }
+  
+  .green {
+    background-color: green;
+    
+    
+  }
+  

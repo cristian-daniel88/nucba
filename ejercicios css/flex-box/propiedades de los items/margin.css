@@ -1,0 +1,30 @@
+body {
+    margin: 0;
+  }
+  
+  .flex-container {
+    display: flex;
+    height: 100vh;
+  
+  }
+  
+  .flex-item {
+    background-color: black;
+    color: honeydew;
+    text-align: center;
+    margin: 5px;
+    min-width: 150px;
+    height: 120px; 
+
+    /* propiedad de margin en items */
+    margin-left: auto;
+    
+  }
+  
+  .orange {
+    background-color: orange;
+  }
+  
+  .green {
+    background-color: green;
+  }

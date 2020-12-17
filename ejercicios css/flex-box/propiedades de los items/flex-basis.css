@@ -1,0 +1,35 @@
+body {
+    margin: 0;
+  }
+  
+  .flex-container {
+    display: flex;
+    height: 100vh;
+  }
+  
+  .flex-item {
+    background-color: black;
+    color: honeydew;
+    text-align: center;
+    margin: 5px;
+    min-width: 120px;
+    height: 120px;
+    flex-grow: 1;
+    
+    
+  }
+  
+  .orange {
+    background-color: orange;
+
+    /* es mucho mas importante el flex-basis que el width */
+    flex-basis: 300px;
+    
+  }
+  
+  .green {
+    background-color: green;
+    
+    
+  }
+  

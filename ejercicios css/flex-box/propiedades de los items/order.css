@@ -1,0 +1,38 @@
+body {
+    margin: 0;
+  }
+  
+  .flex-container {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+  }
+  
+  .flex-item {
+    background-color: black;
+   
+    color: honeydew;
+    text-align: center;
+    margin: 5px;
+    height: 120px;
+    flex-grow: 1;
+    width: 300px;
+    
+    
+  }
+  
+  .orange {
+    background-color: orange;
+
+    /* la caja pasa se va al final abajo */
+    order: 4;
+
+    
+  }
+  
+  .green {
+    background-color: green;
+    
+    
+  }
+  

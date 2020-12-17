@@ -1,0 +1,33 @@
+body {
+    margin: 0;
+  }
+  
+  .flex-container {
+    display: flex;
+    height: 100vh;
+
+    /* en este caso le pondremos wrap : cuando se achica menor a 250px la manda para abajo */
+    flex-wrap: wrap;
+  }
+  
+  .flex-item {
+    background-color: black;
+    color: honeydew;
+    text-align: center;
+    margin: 5px;
+    min-width: 250px;
+    height: 120px;
+    
+    /* flex-grow se reparte lo que sobra en partes iguales */
+    flex-grow: 1;
+  }
+  
+  .orange {
+    background-color: orange;
+  }
+  
+  .green {
+    background-color: green;
+    
+  }
+  

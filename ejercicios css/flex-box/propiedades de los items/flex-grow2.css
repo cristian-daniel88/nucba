@@ -1,0 +1,31 @@
+body {
+    margin: 0;
+  }
+  
+  .flex-container {
+    display: flex;
+    height: 100vh;
+  }
+  
+  .flex-item {
+    background-color: black;
+    color: honeydew;
+    text-align: center;
+    margin: 5px;
+    min-width: 120px;
+    height: 120px;
+    
+    
+  }
+  
+  .orange {
+    background-color: orange;
+    /* flex-grow lo que sobra se lo lleva la caja naranja */
+    flex-grow: 1;
+  }
+  
+  .green {
+    background-color: green;
+    
+  }
+  

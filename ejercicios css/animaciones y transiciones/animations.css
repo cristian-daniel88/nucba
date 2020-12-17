@@ -1,0 +1,29 @@
+@keyframes constante {
+  0% {
+    width: 100px;
+    height: 100px;
+  }
+  100% {
+    width: 800px;
+    height: 600px;
+  }
+}
+
+#container {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#cuadrado {
+  background-color: tomato;
+  animation-name: constante;
+  animation-duration: 10s;
+  /*animation-fill-mode sirve para quede agrandado */
+  animation-fill-mode: both;
+}
+
+/* alt shift f acomoda el css */
+/* formatear con prettier es con ctrl shift p y elegir format document
